@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-whatsapp-dark text-whatsapp-text;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+}
+
+@layer utilities {
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
+
+@layer components {
+  /* Amber glow + "solar heat" press/hover animation — reusable on any button. */
+  .btn-glow {
+    @apply transition-transform duration-200 ease-out hover:scale-[1.045] active:scale-95 hover:animate-amber-glow focus-visible:animate-amber-glow outline-none;
+  }
+  .btn-glow:active {
+    animation: solar-heat 0.4s ease-out;
+  }
+
+  .input { @apply bg-whatsapp-hover text-whatsapp-text rounded-lg px-4 py-2.5 text-sm outline-none border border-transparent focus:border-whatsapp-green w-full; }
+  .icon-btn { @apply btn-glow p-2 text-whatsapp-text-secondary hover:bg-whatsapp-hover rounded-full; }
+  .send-btn { @apply btn-glow w-11 h-11 shrink-0 bg-whatsapp-green text-white rounded-full flex items-center justify-center hover:bg-whatsapp-green-dark disabled:opacity-40 disabled:cursor-not-allowed disabled:hover:scale-100 disabled:hover:animate-none; }
+  .avatar { @apply w-11 h-11 rounded-full bg-whatsapp-green flex items-center justify-center text-white font-bold shrink-0; }
+  .avatar-lg { @apply w-28 h-28 text-4xl; }
+  .bubble { @apply max-w-[75%] px-3 py-2 rounded-lg shadow-sm; }
+  .bubble-me { @apply bg-whatsapp-chat-bubble text-white rounded-tr-none; }
+  .bubble-in { @apply bg-whatsapp-chat-bubble-in text-whatsapp-text rounded-tl-none; }
+  .date-pill { @apply bg-whatsapp-hover text-whatsapp-text-secondary text-xs px-3 py-1 rounded-full; }
+  .filter-btn { @apply btn-glow px-3 py-1 rounded-full text-xs bg-whatsapp-hover text-whatsapp-text-secondary; }
+  .filter-active { @apply btn-glow px-3 py-1 rounded-full text-xs bg-whatsapp-green text-white animate-amber-glow; }
+  .call-btn { @apply btn-glow w-14 h-14 rounded-full flex items-center justify-center text-white hover:opacity-90; }
+  .modal-overlay { @apply fixed inset-0 bg-black/60 flex items-center justify-center z-50 p-4; }
+  .modal-card { @apply bg-whatsapp-panel w-full max-w-sm rounded-xl shadow-xl flex flex-col max-h-[85vh]; }
+  .btn-primary { @apply btn-glow bg-whatsapp-green text-white rounded-lg px-4 py-2.5 text-sm font-medium hover:bg-whatsapp-green-dark disabled:opacity-40 disabled:cursor-not-allowed disabled:hover:scale-100 disabled:hover:animate-none; }
+  .btn-secondary { @apply btn-glow bg-whatsapp-hover text-whatsapp-text rounded-lg px-4 py-2.5 text-sm font-medium hover:opacity-80; }
+  .toggle-track { @apply w-11 h-6 rounded-full relative transition-colors shrink-0; }
+  .toggle-thumb { @apply absolute top-0.5 w-5 h-5 rounded-full bg-white transition-transform; }
+  .encryption-note { @apply text-center text-[11px] text-whatsapp-text-secondary bg-whatsapp-hover/60 mx-3 mt-2 py-1.5 px-3 rounded-lg flex items-center justify-center gap-1; }
+}
