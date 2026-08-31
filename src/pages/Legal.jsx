@@ -62,7 +62,7 @@ export default function Legal() {
             </div>
             <h1 className="text-3xl font-bold text-white">{section.title}</h1>
             <p className="text-whatsapp-text-secondary mt-2">{section.intro}</p>
-            <p className="text-xs text-whatsapp-text-secondary mt-3">Last updated: August 31, 2026</p>
+            <p className="text-xs text-whatsapp-text-secondary mt-3">Last updated: YESTERDAY</p>
           </div>
 
           <div className="p-6 sm:p-8 space-y-7">
@@ -76,7 +76,7 @@ export default function Legal() {
         </div>
 
         <footer className="text-center text-xs text-whatsapp-text-secondary py-8">
-          © 2026 ChatApp. All rights reserved.
+          ©  ChatApp. All rights reserved.
         </footer>
       </main>
     </div>

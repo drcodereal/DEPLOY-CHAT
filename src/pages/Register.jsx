@@ -154,7 +154,7 @@ export default function Register() {
           <Link to="/legal?page=terms" className="hover:text-whatsapp-green hover:underline">Terms & Conditions</Link>
           <span>•</span>
           <Link to="/legal?page=privacy" className="hover:text-whatsapp-green hover:underline">Privacy Policy</Link>
-          <p className="mt-2">© 2026 ChatApp. All rights reserved.</p>
+          <p className="mt-2">© ChatApp. All rights reserved.</p>
         </div>
       </div>
     </div>
